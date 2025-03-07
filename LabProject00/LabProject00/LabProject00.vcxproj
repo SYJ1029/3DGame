@@ -127,13 +127,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="framework.h" />
+    <ClInclude Include="stdfx.h" />
     <ClInclude Include="LabProject00.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="LabProject00.cpp" />
+    <ClCompile Include="stdfx.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="LabProject00.rc" />

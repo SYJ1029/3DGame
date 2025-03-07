@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="framework.h">
+    <ClInclude Include="stdfx.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="targetver.h">
@@ -30,6 +30,9 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="LabProject00.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="stdfx.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
