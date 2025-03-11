@@ -2,8 +2,9 @@
 //
 
 #include "stdafx.h"
-#include "LabProject02.h"
 #include "CGameFramework.h"
+#include "LabProject02.h"
+
 
 #define MAX_LOADSTRING 100
 
