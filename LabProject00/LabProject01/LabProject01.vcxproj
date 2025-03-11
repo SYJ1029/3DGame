@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{a3708846-5338-4655-bb75-1a4adabc271f}</ProjectGuid>
-    <RootNamespace>LabProject00</RootNamespace>
+    <ProjectGuid>{9db66c10-72b5-4f29-80a4-bf7d2475daaf}</ProjectGuid>
+    <RootNamespace>LabProject01</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -128,21 +128,18 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="stdfx.h" />
-    <ClInclude Include="LabProject00.h" />
+    <ClInclude Include="LabProject01.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="LabProject00.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="stdfx.cpp" />
+    <ClCompile Include="LabProject01.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="LabProject00.rc" />
+    <ResourceCompile Include="LabProject01.rc" />
   </ItemGroup>
   <ItemGroup>
-    <Image Include="LabProject00.ico" />
+    <Image Include="LabProject01.ico" />
     <Image Include="small.ico" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
