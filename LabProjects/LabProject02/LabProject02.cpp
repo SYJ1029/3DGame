@@ -3,6 +3,7 @@
 
 #include "stdafx.h"
 #include "LabProject02.h"
+#include "CGameFramework.h"
 
 #define MAX_LOADSTRING 100
 
