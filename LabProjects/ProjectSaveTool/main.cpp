@@ -16,6 +16,6 @@ int main()
 	std::string filename;
 	std::string filenumber;
 
-	save("../LabProject03/stdafx.cpp");
+	save("../LabProject03/GameFramework.cpp");
 }
 
