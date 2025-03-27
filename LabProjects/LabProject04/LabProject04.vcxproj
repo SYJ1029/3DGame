@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{cf72a4cc-1390-46ca-8f10-ff71d18aa815}</ProjectGuid>
-    <RootNamespace>LabProject03</RootNamespace>
+    <ProjectGuid>{bcd88712-87b2-4680-a086-3175095e8e09}</ProjectGuid>
+    <RootNamespace>LabProject04</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -133,8 +133,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="framework.h" />
     <ClInclude Include="GameFramework.h" />
-    <ClInclude Include="LabProject03.h" />
+    <ClInclude Include="LabProject04.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
@@ -142,15 +143,15 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="GameFramework.cpp" />
-    <ClCompile Include="LabProject03.cpp" />
+    <ClCompile Include="LabProject04.cpp" />
     <ClCompile Include="stdafx.cpp" />
     <ClCompile Include="Timer.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="LabProject03.rc" />
+    <ResourceCompile Include="LabProject04.rc" />
   </ItemGroup>
   <ItemGroup>
-    <Image Include="LabProject03.ico" />
+    <Image Include="LabProject04.ico" />
     <Image Include="small.ico" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
