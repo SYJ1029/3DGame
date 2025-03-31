@@ -1,6 +1,5 @@
 #include "Timer.h"
 
-
 CGameTimer::CGameTimer()
 {
 	if (::QueryPerformanceFrequency((LARGE_INTEGER*)&m_nPerformanceFrequency))

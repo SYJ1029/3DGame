@@ -1,5 +1,6 @@
 #pragma once
 #include "Timer.h"
+#include "Scene.h"
 
 class CGameFramework
 {
@@ -24,7 +25,6 @@ private:
 	UINT m_nSwapChainBufferIndex;
 	// 스왑 체인의 현재 후면 버퍼 인덱스
 
-	ID3D12Resource* m_ppd3dRenderTargetBuffers[m_nSwapChainBuffers];
 	ID3D12Resource* m_ppd3dSwapChainBackBuffers[m_nSwapChainBuffers];
 	ID3D12DescriptorHeap* m_pd3dRtvDescriptorHeap;
 	UINT m_nRtvDescriptorIncrementSize;
@@ -43,7 +43,7 @@ private:
 	ID3D12PipelineState* m_pd3dPipelineState;
 	//그래픽스 파이프라인 상태 객체에 대한 인터페이스 포인터이다. 
 	ID3D12Fence *m_pd3dFence;
-	UINT64 m_nFenceValue;
+	UINT64 m_nFenceValues[m_nSwapChainBuffers];
 	HANDLE m_hFenceEvent;
 	//펜스 인터페이스 포인터, 펜스의 값, 이벤트 핸들이다. 
 	D3D12_VIEWPORT m_d3dViewport;
@@ -54,6 +54,8 @@ private:
 	CGameTimer m_GameTimer;
 	//다음은 프레임 레이트를 주 윈도우의 캡션에 출력하기 위한 문자열이다.
 	_TCHAR m_pszFrameRate[50];
+
+	CScene* m_pScene;
 public:
 	CGameFramework();
 	~CGameFramework();
@@ -77,6 +79,7 @@ public:
 	void AnimateObjects();
 	void FrameAdvance();
 	void WaitForGpuComplete();
+	void MoveToNextFrame();
 	//CPU와 GPU를 동기화하는 함수이다. 
 	void OnProcessingMouseMessage(HWND hWnd, UINT nMessageID, WPARAM wParam, 
 		LPARAM lParam);
