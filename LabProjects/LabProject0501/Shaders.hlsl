@@ -1,4 +1,4 @@
-float4 main( uint nVertexID : SV_VertexID) : SV_Position
+float4 VSMain( uint nVertexID : SV_VertexID) : SV_Position
 {
     float4 output = (float4)0;
     
@@ -21,8 +21,8 @@ float4 main( uint nVertexID : SV_VertexID) : SV_Position
     return (output);
 }
 
-#define FRAME_BUFFER_WIDTH 640.0f
-#define FRAME_BUFFER_HEIGHT 480.0f
+#define FRAME_BUFFER_WIDTH 800.0f
+#define FRAME_BUFFER_HEIGHT 600.0f
 
 float4 PSMain(float4 input : SV_POSITION) : SV_TARGET
 {

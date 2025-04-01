@@ -41,17 +41,10 @@ void CScene::CreateGraphicsPipelineState(ID3D12Device* pd3dDevice)
 #if defined(_DEBUG)
 	nCompileFlags = D3DCOMPILE_DEBUG | D3DCOMPILE_SKIP_OPTIMIZATION;
 #endif
-<<<<<<< HEAD
-	D3DCompileFromFile(L"VertexShader.hlsl", NULL, NULL, "main", "vs_5_1", nCompileFlags, 0,
-		&pd3dVertexShaderBlob, NULL);
-	D3DCompileFromFile(L"PixelShader.hlsl", NULL, NULL, "main", "ps_5_1", nCompileFlags, 0,
-=======
 	D3DCompileFromFile(L"Shaders.hlsl", NULL, NULL, "VSMain", "vs_5_1", nCompileFlags, 0,
 		&pd3dVertexShaderBlob, NULL);
 	D3DCompileFromFile(L"Shaders.hlsl", NULL, NULL, "PSMain", "ps_5_1", nCompileFlags, 0,
->>>>>>> parent of 082947a (ë¶„ë¦¬ëŠ” ì¶©ë¶„ížˆ ê°€ëŠ¥í•˜ë‹¤)
 		&pd3dPixelShaderBlob, NULL);
-
 	//·¡½ºÅÍ¶óÀÌÀú »óÅÂ¸¦ ¼³Á¤ÇÑ´Ù.
 	D3D12_RASTERIZER_DESC d3dRasterizerDesc;
 	::ZeroMemory(&d3dRasterizerDesc, sizeof(D3D12_RASTERIZER_DESC));
