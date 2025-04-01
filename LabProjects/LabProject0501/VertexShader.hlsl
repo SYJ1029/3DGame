@@ -1,4 +1,4 @@
-float4 VSMain( uint nVertexID : SV_VertexID) : SV_Position
+float4 main( uint nVertexID : SV_VertexID) : SV_Position
 {
     float4 output = (float4)0;
     
