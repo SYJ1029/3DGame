@@ -41,9 +41,9 @@ void CScene::CreateGraphicsPipelineState(ID3D12Device* pd3dDevice)
 #if defined(_DEBUG)
 	nCompileFlags = D3DCOMPILE_DEBUG | D3DCOMPILE_SKIP_OPTIMIZATION;
 #endif
-	D3DCompileFromFile(L"Shaders.hlsl", NULL, NULL, "VSMain", "vs_5_1", nCompileFlags, 0,
+	D3DCompileFromFile(L"VertexShader.hlsl", NULL, NULL, "VSMain", "vs_5_1", nCompileFlags, 0,
 		&pd3dVertexShaderBlob, NULL);
-	D3DCompileFromFile(L"Shaders.hlsl", NULL, NULL, "PSMain", "ps_5_1", nCompileFlags, 0,
+	D3DCompileFromFile(L"PixelShader.hlsl", NULL, NULL, "PSMain", "ps_5_1", nCompileFlags, 0,
 		&pd3dPixelShaderBlob, NULL);
 	//래스터라이저 상태를 설정한다.
 	D3D12_RASTERIZER_DESC d3dRasterizerDesc;
