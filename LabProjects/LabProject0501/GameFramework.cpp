@@ -14,7 +14,6 @@ CGameFramework::CGameFramework()
 	for (int i = 0; i < m_nSwapChainBuffers; i++) {
 		m_pScene = NULL;
 		m_ppd3dSwapChainBackBuffers[i] = NULL;
-		m_ppd3dSwapChainBackBuffers[i] = NULL;
 		m_nFenceValues[i] = 0;
 	}
 	m_d3dViewport = { 0, 0, FRAME_BUFFER_WIDTH, FRAME_BUFFER_HEIGHT, 0.0f, 1.0f };
@@ -365,7 +364,6 @@ void CGameFramework::OnProcessingMouseMessage(HWND hWnd, UINT nMessageID, WPARAM
 		break;
 	case VK_RETURN:
 		break;
-		//“F9” 키가 눌려지면 윈도우 모드와 전체화면 모드의 전환을 처리한다.
 	default:
 		break;
 	}
@@ -387,6 +385,7 @@ void CGameFramework::OnProcessingKeyboardMessage(HWND hWnd, UINT nMessageID, WPA
 		case VK_F8:
 			break;
 		case VK_F9:
+			//“F9” 키가 눌려지면 윈도우 모드와 전체화면 모드의 전환을 처리한다.
 			ChangeSwapChainState();
 			break;
 		default:
@@ -398,8 +397,7 @@ void CGameFramework::OnProcessingKeyboardMessage(HWND hWnd, UINT nMessageID, WPA
 	}
 }
 
-LRESULT CALLBACK CGameFramework::OnProcessingWindowMessage(HWND hWnd, UINT nMessageID,
-	WPARAM wParam, LPARAM lParam)
+LRESULT CALLBACK CGameFramework::OnProcessingWindowMessage(HWND hWnd, UINT nMessageID, WPARAM wParam, LPARAM lParam)
 {
 	switch (nMessageID)
 	{
