@@ -31,6 +31,15 @@
       <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
       <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
     </Filter>
+<<<<<<< HEAD
+=======
+    <Filter Include="Shaders\code">
+      <UniqueIdentifier>{2a6b4cb4-7f04-4253-ab06-767058bf97a8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameObject">
+      <UniqueIdentifier>{ce1b10a2-52bb-4df8-b388-8d21f8976a36}</UniqueIdentifier>
+    </Filter>
+>>>>>>> 4d2e5e680f6da1f747a5f1a3b657aab7ae177e65
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="targetver.h">
@@ -54,6 +63,18 @@
     <ClInclude Include="Timer.h">
       <Filter>Timer</Filter>
     </ClInclude>
+<<<<<<< HEAD
+=======
+    <ClInclude Include="Shader.h">
+      <Filter>Shaders\code</Filter>
+    </ClInclude>
+    <ClInclude Include="Mesh.h">
+      <Filter>Mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="GameObject.h">
+      <Filter>GameObject</Filter>
+    </ClInclude>
+>>>>>>> 4d2e5e680f6da1f747a5f1a3b657aab7ae177e65
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="LabProject06.cpp">
@@ -71,6 +92,18 @@
     <ClCompile Include="Timer.cpp">
       <Filter>Timer</Filter>
     </ClCompile>
+<<<<<<< HEAD
+=======
+    <ClCompile Include="Shader.cpp">
+      <Filter>Shaders\code</Filter>
+    </ClCompile>
+    <ClCompile Include="Mesh.cpp">
+      <Filter>Mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="GameObject.cpp">
+      <Filter>GameObject</Filter>
+    </ClCompile>
+>>>>>>> 4d2e5e680f6da1f747a5f1a3b657aab7ae177e65
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="LabProject06.rc">
