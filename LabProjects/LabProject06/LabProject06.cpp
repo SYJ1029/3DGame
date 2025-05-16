@@ -4,10 +4,7 @@
 #include "stdafx.h"
 #include "GameFramework.h"
 #include "LabProject06.h"
-<<<<<<< HEAD
-=======
 #include "Mesh.h"
->>>>>>> 4d2e5e680f6da1f747a5f1a3b657aab7ae177e65
 
 
 #define MAX_LOADSTRING 100
