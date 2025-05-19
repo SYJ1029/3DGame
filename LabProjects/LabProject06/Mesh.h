@@ -50,3 +50,9 @@ public:
 	virtual void Render(ID3D12GraphicsCommandList* pd3dCommandList);
 };
 
+class CTriangleMesh : public CMesh
+{
+public:
+	CTriangleMesh(ID3D12Device* pd3dDevice, ID3D12GraphicsCommandList* pd3dCommandList);
+	virtual ~CTriangleMesh() {}
+};

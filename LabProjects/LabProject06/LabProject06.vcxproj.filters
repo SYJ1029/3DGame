@@ -33,6 +33,9 @@
     <ClCompile Include="Shader.cpp">
       <Filter>Shader</Filter>
     </ClCompile>
+    <ClCompile Include="Vertex.cpp">
+      <Filter>Mesh\Vertex</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="LabProject06.h">
@@ -104,6 +107,9 @@
     </Filter>
     <Filter Include="Shader\hlsl">
       <UniqueIdentifier>{74ffe3cb-eac6-4396-9a23-865b474aa29b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Mesh\Vertex">
+      <UniqueIdentifier>{9e74b85c-6608-46f1-94a6-09b91c3e38a5}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
