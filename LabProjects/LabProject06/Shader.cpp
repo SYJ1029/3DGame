@@ -90,16 +90,47 @@ D3D12_INPUT_LAYOUT_DESC CShader::CreateInputLayout()
 	return(d3dInputLayoutDesc);
 }
 
+D3D12_SHADER_BYTECODE CShader::ReadCompiledShaderFile(WCHAR* pszFile, ID3DBlob** ppd3dBlob) {
+	FILE* pFile = NULL;
+	::_wfopen_s(&pFile, pszFile, L"rb");
+	::fseek(pFile, 0, SEEK_END);
+	int nFileSize = ::ftell(pFile);
+	BYTE* pByteCode = new BYTE[nFileSize];
+	::rewind(pFile);
+	UINT nReadBytes = (UINT)::fread(pByteCode, sizeof(BYTE), nFileSize, pFile);
+	::fclose(pFile);
+
+	D3D12_SHADER_BYTECODE d3dByteCode;
+	if (ppd3dBlob) {
+		HRESULT hResult = D3DCreateBlob(nReadBytes, ppd3dBlob);
+		memcpy((*ppd3dBlob)->GetBufferPointer(), pByteCode, nReadBytes);
+		d3dByteCode.BytecodeLength = (*ppd3dBlob)->GetBufferSize();
+		d3dByteCode.pShaderBytecode = (*ppd3dBlob)->GetBufferPointer();
+	}
+	else {
+		d3dByteCode.BytecodeLength = nReadBytes;
+		d3dByteCode.pShaderBytecode = pByteCode;
+	}
+	return(d3dByteCode);
+}
+
 //정점 셰이더 바이트 코드를 생성(컴파일)한다. 
+//D3D12_SHADER_BYTECODE CShader::CreateVertexShader(ID3DBlob** ppd3dShaderBlob) {
+//	return(CShader::ReadCompiledShaderFile(L"Shaders(VS).cso", ppd3dShaderBlob));
+//}
+
 D3D12_SHADER_BYTECODE CShader::CreateVertexShader(ID3DBlob** ppd3dShaderBlob)
 {
-	return(CompileShaderFromFile(L"Shaders.hlsl", "VSMain", "vs_5_1", ppd3dShaderBlob));
+	return(CompileShaderFromFile(L"VertexShader.hlsl", "VSMain", "vs_5_1", ppd3dShaderBlob));
 }
+
+
 //픽셀 셰이더 바이트 코드를 생성(컴파일)한다. 
 D3D12_SHADER_BYTECODE CShader::CreatePixelShader(ID3DBlob** ppd3dShaderBlob)
 {
-	return(CompileShaderFromFile(L"Shaders.hlsl", "PSMain", "ps_5_1", ppd3dShaderBlob));
+	return(CompileShaderFromFile(L"PixelShader.hlsl", "PSMain", "ps_5_1", ppd3dShaderBlob));
 }
+
 //셰이더 소스 코드를 컴파일하여 바이트 코드 구조체를 반환한다. 
 D3D12_SHADER_BYTECODE CShader::CompileShaderFromFile(WCHAR* pszFileName, LPCSTR
 	pszShaderName, LPCSTR pszShaderProfile, ID3DBlob** ppd3dShaderBlob)

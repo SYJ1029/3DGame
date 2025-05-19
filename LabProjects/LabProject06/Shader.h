@@ -18,6 +18,7 @@ public:
 	virtual D3D12_DEPTH_STENCIL_DESC CreateDepthStencilState();
 	virtual D3D12_SHADER_BYTECODE CreateVertexShader(ID3DBlob** ppd3dShaderBlob);
 	virtual D3D12_SHADER_BYTECODE CreatePixelShader(ID3DBlob** ppd3dShaderBlob);
+	D3D12_SHADER_BYTECODE ReadCompiledShaderFile(WCHAR* pszFile, ID3DBlob** ppd3dBlob);
 	D3D12_SHADER_BYTECODE CompileShaderFromFile(WCHAR* pszFileName, LPCSTR pszShaderName,
 		LPCSTR pszShaderProfile, ID3DBlob** ppd3dShaderBlob);
 	virtual void CreateShader(ID3D12Device* pd3dDevice, ID3D12RootSignature
