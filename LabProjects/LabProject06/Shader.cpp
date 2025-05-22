@@ -92,7 +92,7 @@ D3D12_INPUT_LAYOUT_DESC CShader::CreateInputLayout()
 
 
 
-//정점 셰이더 바이트 코드를 생성(컴파일)한다. 
+//컴파일 된 정점 셰이더 바이트 코드를 읽어온다
 D3D12_SHADER_BYTECODE CShader::CreateVertexShader(ID3DBlob** ppd3dShaderBlob) {
 	return(ReadCompiledShaderFile(L"VertexShader.cso", ppd3dShaderBlob));
 }
