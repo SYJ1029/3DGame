@@ -16,6 +16,15 @@ int main()
 	std::string filename;
 	std::string filenumber;
 
-	save("../LabProject03/GameFramework.cpp");
+	foldername = "../";
+	filename = "LabProject";
+
+	std::cin >> filenumber;
+
+	std::cout << &filenumber << std::endl;
+	filenumber.append("/");
+	std::cout << &filenumber << std::endl;
+
+	save("../LabProject10/GameFramework.cpp");
 }
 

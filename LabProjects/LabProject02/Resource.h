@@ -10,8 +10,8 @@
 #define IDM_ABOUT				104
 #define IDM_EXIT				105
 #define IDI_LABPROJECT02			107
-#define IDI_SMALL				108
-#define IDC_LABPROJECT02			109
+#define IDI_SMALL				110
+#define IDC_LABPROJECT02			110
 #define IDC_MYICON				2
 #ifndef IDC_STATIC
 #define IDC_STATIC				-1

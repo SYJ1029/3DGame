@@ -88,7 +88,7 @@
       <UniqueIdentifier>{f333d7ed-55bc-46f9-a23e-10f241d63607}</UniqueIdentifier>
     </Filter>
     <Filter Include="Mesh">
-      <UniqueIdentifier>{fd0206f1-dd10-458d-b5d2-10800debeae4}</UniqueIdentifier>
+      <UniqueIdentifier>{fd0206f1-dd10-458d-b5d2-10900debeae4}</UniqueIdentifier>
     </Filter>
     <Filter Include="Shader">
       <UniqueIdentifier>{e545e3bf-90c0-4893-8d15-ee443267b78a}</UniqueIdentifier>
@@ -109,7 +109,7 @@
       <UniqueIdentifier>{74ffe3cb-eac6-4396-9a23-865b474aa29b}</UniqueIdentifier>
     </Filter>
     <Filter Include="Mesh\Vertex">
-      <UniqueIdentifier>{9e74b85c-6608-46f1-94a6-09b91c3e38a5}</UniqueIdentifier>
+      <UniqueIdentifier>{9e74b85c-6609-46f1-94a6-09b91c3e38a5}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
