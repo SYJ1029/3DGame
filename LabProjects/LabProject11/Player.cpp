@@ -71,14 +71,16 @@ void CPlayer::Move(const XMFLOAT3& xmf3Shift, bool bUpdateVelocity)
 	{
 		//플레이어의 속도 벡터를 xmf3Shift 벡터만큼 변경한다.
 		m_xmf3Velocity = Vector3::Add(m_xmf3Velocity, xmf3Shift);
+		m_xmf3Position = Vector3::Add(m_xmf3Position, xmf3Shift);
 	}
 	else
 	{
 		//플레이어를 현재 위치 벡터에서 xmf3Shift 벡터만큼 이동한다.
-		m_xmf3Position = Vector3::Add(m_xmf3Position, xmf3Shift);
 		//플레이어의 위치가 변경되었으므로 카메라의 위치도 xmf3Shift 벡터만큼 이동한다.
 		if (m_pCamera) m_pCamera->Move(xmf3Shift);
 	}
+
+
 }
 //플레이어를 로컬 x-축, y-축, z-축을 중심으로 회전한다.
 void CPlayer::Rotate(float x, float y, float z)
@@ -211,7 +213,6 @@ void CPlayer::Update(float fTimeElapsed)
 	float fDeceleration = (m_fFriction * fTimeElapsed);
 	if (fDeceleration > fLength) fDeceleration = fLength;
 	//m_xmf3Velocity = Vector3::Add(m_xmf3Velocity, Vector3::ScalarProduct(m_xmf3Velocity, -fDeceleration, true));
-
 	
 }
 
@@ -308,9 +309,9 @@ CAirplanePlayer::CAirplanePlayer(ID3D12Device* pd3dDevice, ID3D12GraphicsCommand
 	//플레이어를 위한 셰이더 변수를 생성한다.
 	CreateShaderVariables(pd3dDevice, pd3dCommandList);
 	//플레이어의 위치를 설정한다.
-	SetPosition(XMFLOAT3(0.0f, 0.0f, -50.0f));
+	SetPosition(XMFLOAT3(0.0f, 0.0f, -30.0f));
 	//플레이어(비행기) 메쉬를 렌더링할 때 사용할 셰이더를 생성한다.
-	CObjectsShader* pShader = new CObjectsShader();
+	CDiffusedShader* pShader = new CDiffusedShader();
 	pShader->CreateShader(pd3dDevice, pd3dGraphicsRootSignature);
 	SetShader(pShader);
 }
