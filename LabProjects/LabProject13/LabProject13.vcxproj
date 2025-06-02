@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{8b733b56-4bd7-4802-bec4-d26a87470f9b}</ProjectGuid>
-    <RootNamespace>LabProject12</RootNamespace>
+    <ProjectGuid>{962c1e3a-161c-44c6-9828-95422b1092a2}</ProjectGuid>
+    <RootNamespace>LabProject13</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -112,9 +112,6 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
     <FxCompile>
-      <EntryPointName>Diffused</EntryPointName>
-    </FxCompile>
-    <FxCompile>
       <ShaderType>Vertex</ShaderType>
     </FxCompile>
     <FxCompile>
@@ -139,9 +136,6 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
     <FxCompile>
-      <EntryPointName>Diffused</EntryPointName>
-    </FxCompile>
-    <FxCompile>
       <ShaderType>Vertex</ShaderType>
     </FxCompile>
     <FxCompile>
@@ -149,24 +143,10 @@
     </FxCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="AirplaneMesh.cpp" />
-    <ClCompile Include="Camera.cpp" />
-    <ClCompile Include="GameFramework.cpp" />
-    <ClCompile Include="GameObject.cpp" />
-    <ClCompile Include="LabProject12.cpp" />
-    <ClCompile Include="Mesh.cpp" />
-    <ClCompile Include="Player.cpp" />
-    <ClCompile Include="Scene.cpp" />
-    <ClCompile Include="Shader.cpp" />
-    <ClCompile Include="stdafx.cpp" />
-    <ClCompile Include="Timer.cpp" />
-    <ClCompile Include="Vertex.cpp" />
-  </ItemGroup>
-  <ItemGroup>
     <ClInclude Include="Camera.h" />
     <ClInclude Include="GameFramework.h" />
     <ClInclude Include="GameObject.h" />
-    <ClInclude Include="LabProject12.h" />
+    <ClInclude Include="LabProject13.h" />
     <ClInclude Include="Mesh.h" />
     <ClInclude Include="Player.h" />
     <ClInclude Include="Resource.h" />
@@ -177,27 +157,37 @@
     <ClInclude Include="Timer.h" />
   </ItemGroup>
   <ItemGroup>
-    <Image Include="LabProject12.ico" />
-    <Image Include="small.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <ResourceCompile Include="LabProject12.rc" />
+    <ClCompile Include="AirplaneMesh.cpp" />
+    <ClCompile Include="Camera.cpp" />
+    <ClCompile Include="GameFramework.cpp" />
+    <ClCompile Include="GameObject.cpp" />
+    <ClCompile Include="LabProject13.cpp" />
+    <ClCompile Include="Mesh.cpp" />
+    <ClCompile Include="Player.cpp" />
+    <ClCompile Include="Scene.cpp" />
+    <ClCompile Include="Shader.cpp" />
+    <ClCompile Include="stdafx.cpp" />
+    <ClCompile Include="Timer.cpp" />
+    <ClCompile Include="Vertex.cpp" />
   </ItemGroup>
   <ItemGroup>
     <FxCompile Include="PixelShader.hlsl">
       <EntryPointName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">PSDiffused</EntryPointName>
-      <EntryPointName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">PSDiffused</EntryPointName>
       <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Pixel</ShaderType>
+      <EntryPointName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">PSDiffused</EntryPointName>
       <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Pixel</ShaderType>
-      <ObjectFileOutput Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(Filename).cso</ObjectFileOutput>
-      <ObjectFileOutput Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(Filename).cso</ObjectFileOutput>
     </FxCompile>
     <FxCompile Include="VertexShader.hlsl">
       <EntryPointName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">VSDiffused</EntryPointName>
       <EntryPointName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">VSDiffused</EntryPointName>
-      <ObjectFileOutput Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(Filename).cso</ObjectFileOutput>
-      <ObjectFileOutput Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(Filename).cso</ObjectFileOutput>
     </FxCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="LabProject13.ico" />
+    <Image Include="small.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="LabProject13.rc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
