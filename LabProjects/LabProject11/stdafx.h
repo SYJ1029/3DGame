@@ -21,6 +21,8 @@
 
 //C++ 런타임 헤더 파일
 #include <random>
+#include <numeric>
+#include <iostream>
 
 #define RANDOM_COLOR XMFLOAT4(rand() / float(RAND_MAX), rand() / float(RAND_MAX), rand() / float(RAND_MAX), rand() / float(RAND_MAX))
 #include <d3d12.h>
